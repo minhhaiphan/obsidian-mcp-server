@@ -1,6 +1,6 @@
 # ---- Base Node ----
 # Use a specific Node.js version known to work, Alpine for smaller size
-FROM node:20-alpine
+FROM node:23-alpine AS base
 WORKDIR /usr/src/app
 ENV NODE_ENV=production
 
