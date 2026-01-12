@@ -1,6 +1,6 @@
 # ---- Base Node ----
 # Use a specific Node.js version known to work, Alpine for smaller size
-FROM node:23-alpine AS base
+FROM node:20-alpine AS base
 WORKDIR /usr/src/app
 ENV NODE_ENV=production
 
@@ -41,7 +41,7 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 
 # Expose port if the application runs a server (adjust if needed)
-# EXPOSE 3000
+EXPOSE 3010
 
 # Command to run the application
 CMD ["node", "dist/index.js"]
