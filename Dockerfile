@@ -44,4 +44,5 @@ USER appuser
 EXPOSE 3010
 
 # Command to run the application
-CMD ["node", "dist/index.js"]
+# CMD ["node", "dist/index.js"]
+ENTRYPOINT ["node", "dist/index.js"]
